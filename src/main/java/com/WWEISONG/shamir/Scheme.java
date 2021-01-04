@@ -97,7 +97,7 @@ public class Scheme {
    */
   public byte[] join(Map<Integer, byte[]> parts) {
     checkArgument(parts.size() > 0, "No parts provided");
-    int[] lengths = new int[16];
+    int[] lengths = new int[parts.size()];
 
     for (int i = 0; i < parts.size(); i++) {
       lengths[i] = 16;
