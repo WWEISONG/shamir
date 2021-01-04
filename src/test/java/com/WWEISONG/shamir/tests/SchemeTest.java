@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.codahale.shamir.tests;
+package com.WWEISONG.shamir.tests;
 
-import static com.codahale.shamir.Generators.byteArrays;
+import static com.WWEISONG.shamir.Generators.byteArrays;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 

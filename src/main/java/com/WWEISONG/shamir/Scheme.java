@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.codahale.shamir;
+package com.WWEISONG.shamir;
 
 import java.security.SecureRandom;
 import java.util.Collections;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.codahale.shamir.benchmarks;
+package com.WWEISONG.shamir.benchmarks;
 
 import com.codahale.shamir.Scheme;
 import java.security.SecureRandom;

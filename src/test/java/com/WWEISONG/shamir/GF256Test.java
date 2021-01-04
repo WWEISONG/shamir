@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.codahale.shamir;
+package com.WWEISONG.shamir;
 
-import static com.codahale.shamir.Generators.bytes;
+import static com.WWEISONG.shamir.Generators.bytes;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.security.SecureRandom;
@@ -52,27 +52,27 @@ class GF256Test implements WithQuickTheories {
 
   @Test
   void mulIsCommutative() {
-    qt().forAll(bytes(), bytes()).check((x, y) -> GF256.mul(x, y) == GF256.mul(y, x));
+    qt().forAll(Generators.bytes(), Generators.bytes()).check((x, y) -> GF256.mul(x, y) == GF256.mul(y, x));
   }
 
   @Test
   void addIsCommutative() {
-    qt().forAll(bytes(), bytes()).check((x, y) -> GF256.add(x, y) == GF256.add(y, x));
+    qt().forAll(Generators.bytes(), Generators.bytes()).check((x, y) -> GF256.add(x, y) == GF256.add(y, x));
   }
 
   @Test
   void subIsTheInverseOfAdd() {
-    qt().forAll(bytes(), bytes()).check((x, y) -> GF256.sub(GF256.add(x, y), y) == x);
+    qt().forAll(Generators.bytes(), Generators.bytes()).check((x, y) -> GF256.sub(GF256.add(x, y), y) == x);
   }
 
   @Test
   void divIsTheInverseOfMul() {
-    qt().forAll(bytes(), bytes(1, 255)).check((x, y) -> GF256.div(GF256.mul(x, y), y) == x);
+    qt().forAll(Generators.bytes(), Generators.bytes(1, 255)).check((x, y) -> GF256.div(GF256.mul(x, y), y) == x);
   }
 
   @Test
   void mulIsTheInverseOfDiv() {
-    qt().forAll(bytes(), bytes(1, 255)).check((x, y) -> GF256.mul(GF256.div(x, y), y) == x);
+    qt().forAll(Generators.bytes(), Generators.bytes(1, 255)).check((x, y) -> GF256.mul(GF256.div(x, y), y) == x);
   }
 
   @Test
