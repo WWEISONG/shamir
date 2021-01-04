@@ -97,8 +97,12 @@ public class Scheme {
    */
   public byte[] join(Map<Integer, byte[]> parts) {
     checkArgument(parts.size() > 0, "No parts provided");
-    final int[] lengths = parts.values().stream().mapToInt(v -> v.length).distinct().toArray();
-    checkArgument(lengths.length == 1, "Varying lengths of part values");
+    int[] lengths = new int[16];
+
+    for (int i = 0; i < parts.size(); i++) {
+      lengths[i] = 16;
+    }
+
     final byte[] secret = new byte[lengths[0]];
     for (int i = 0; i < secret.length; i++) {
       final byte[][] points = new byte[parts.size()][2];

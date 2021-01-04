@@ -9,7 +9,7 @@ algorithm](http://en.wikipedia.org/wiki/Shamir's_Secret_Sharing) over GF(256).
 
 ```xml
 <dependency>
-  <groupId>com.codahale</groupId>
+  <groupId>com.WWEISONG</groupId>
   <artifactId>shamir</artifactId>
   <version>0.7.0</version>
 </dependency>
